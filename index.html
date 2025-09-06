@@ -116,6 +116,31 @@
             color:#fff;
             margin-top: 2rem;
         }
+        /* Estilos para la sección de recomendados */
+        .recomendados-contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .sitio-recomendado {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            width: 120px;
+        }
+        .sitio-recomendado img {
+            height: 80px;
+        }
+        .sitio-recomendado span {
+            margin-top: 6px;
+            color: #205286;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-align: center;
+        }
         @media (max-width:700px){
             section{padding:1rem;}
             nav ul{flex-direction:column; align-items:center;}
@@ -132,6 +157,12 @@
             }
             .section-img-left .text, .section-img-right .text {
                 min-width: 100%;
+            }
+            .recomendados-contenedor {
+                gap: 1rem;
+            }
+            .sitio-recomendado {
+                width: 98px;
             }
         }
     </style>
@@ -231,19 +262,25 @@ Comunidades, es que LEXING decidió abrir su propia área de Administración de 
             </p>
         </div>
     </section>
+    <!-- sección corregida aquí -->
     <section id="recomendados" style="padding: 2rem; max-width: 900px; margin: auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px #d1d6dc44; margin-top: 2rem; text-align: center;">
         <h2 style="color: #205286; margin-bottom: 1.5rem;">Sitios Recomendados</h2>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
-            <a href="https://www.inviertefeliz.cl" target="_blank">
-                <img src="img/inviertefeliz.png" alt="Invierte Feliz" style="height: 80px;">
+        <div class="recomendados-contenedor">
+            <a href="https://www.inviertefeliz.cl" target="_blank" class="sitio-recomendado">
+                <img src="img/inviertefeliz.png" alt="Invierte Feliz">
+                <span>Invierte Feliz</span>
             </a>
-            <a href="https://www.comunidadfeliz.cl" target="_blank">
-                <img src="img/comunidadfeliz.png" alt="Comunidad Feliz" style="height: 80px;">
+            <a href="https://www.comunidadfeliz.cl" target="_blank" class="sitio-recomendado">
+                <img src="img/comunidadfeliz.png" alt="Comunidad Feliz">
+                <span>Comunidad Feliz</span>
             </a>
-            <a href="https://www.coliver.com/real-estate.html" target="_blank">
-                <img src="img/coliver.png" alt="Coliver" style="height: 80px;">
-            <a href="https://condominios.minvu.cl/" target="_blank">
-                <img src="img/condminvu.png" alt="MINVU" style="height: 80px;">
+            <a href="https://www.coliver.com/real-estate.html" target="_blank" class="sitio-recomendado">
+                <img src="img/coliver.png" alt="Coliver">
+                <span>Coliver</span>
+            </a>
+            <a href="https://condominios.minvu.cl/" target="_blank" class="sitio-recomendado">
+                <img src="img/condminvu.png" alt="MINVU">
+                <span>Ley de Copropiedad Inmobiliaria</span>
             </a>
         </div>
     </section>
